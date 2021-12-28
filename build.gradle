@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'io.rest-assured:rest-assured:4.4.0'
+    implementation 'org.slf4j:slf4j-api:1.7.32'
+    implementation 'junit:junit:4.13.2'
+    testImplementation 'org.testng:testng:7.4.0'
+    implementation 'org.slf4j:slf4j-api:2.0.0-alpha5'
+
+}
+
+test {
+    useTestNG {
+        useDefaultListeners = true
+    }
+}
